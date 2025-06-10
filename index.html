@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Plant Pop Irrigation Services - Garden & Butterfly Inspired</title>
+<style>
+  /* CSS Custom Properties for garden + butterfly theme */
+  :root {
+    --primary-green: #3a6b35;
+    --highlight-pink: #e89ab9;
+    --soft-purple: #a886c4;
+    --butterfly-yellow: #f6d258;
+    --neutral-gray: #6b7280;
+    --background: #ffffff;
+    --card-bg: #f9f9fb;
+    --shadow: rgba(58, 107, 53, 0.15);
+    --border-radius: 12px;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap');
+
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    background: var(--background);
+    font-family: var(--font-body);
+    color: var(--neutral-gray);
+    line-height: 1.6;
+    font-size: 17px;
+    text-align: center; /* Center all text */
+  }
+  a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--highlight-pink);
+  }
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    margin-top: 0;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0 4rem 0;
+    text-align: center; /* Center content */
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    gap: 2rem;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: var(--highlight-pink);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #d3e9d7 30%, #fce0ec 75%);
+    padding: 4rem 1rem 6rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px var(--shadow);
+    user-select: none;
+  }
+  .hero h1 {
+    color: var(--primary-green);
+    font-weight: 800;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero p {
+    font-size: 1.4rem;
+    color: var(--soft-purple);
+    margin: 1rem auto 3rem auto;
+    max-width: 850px;
+  }
+  .btn-primary {
+    background: var(--primary-green);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(58,107,53,0.3);
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background-color: var(--highlight-pink);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(232,154,185,0.5);
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 6rem;
+  }
+
+  /* Cards for services and features */
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 20px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(216, 151, 193, 0.4);
+  }
+  .card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.25rem;
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  /* Grid Layout */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 3rem;
+    justify-items: center;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 3.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Pricing table */
+  .pricing-table {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    border-collapse: collapse;
+  }
+  .pricing-table th,
+  .pricing-table td {
+    border: 1px solid #dcdcdc;
+    padding: 1.25rem 2rem;
+    text-align: center; /* Center all table text */
+  }
+  .pricing-table th {
+    background: var(--butterfly-yellow);
+    color: var(--primary-green);
+  }
+  .pricing-table tbody tr:hover {
+    background-color: #fce0ec;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  .gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 18px var(--shadow);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    max-width: 260px;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Footer */
+  footer {
+    background: var(--primary-green);
+    color: white;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+    text-align: center;
+    user-select: none;
+  }
+  footer p, footer address {
+    margin: 0.3rem 0;
+  }
+  footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  /* Customer Satisfaction */
+  .customer-satisfaction {
+    background: linear-gradient(90deg, #a886c4, #e89ab9);
+    color: white;
+    padding: 3.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px rgba(232,154,185,0.45);
+    max-width: 900px;
+    margin: 0 auto 6rem auto;
+    text-align: center;
+  }
+  .customer-satisfaction h2 {
+    margin-bottom: 1.2rem;
+  }
+  .customer-satisfaction p {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: #fef3f7;
+    border-left: 6px solid var(--highlight-pink);
+    color: var(--primary-green);
+    padding: 1.25rem 2rem;
+    border-radius: var(--border-radius);
+    max-width: 900px;
+    margin: 0 auto 5rem auto;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* New topic section styling */
+  .new-topic {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 1.25rem;
+      font-size: 1.2rem;
+      display: block;
+      margin: 0 auto;
+    }
+    .card {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0">Plant Pop Irrigation</div>
+    <div class="nav-links" role="navigation">
+    <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" role="banner" aria-label="Hero section">
+    <h1>Premium Plant Pop Irrigation Services for Thriving Gardens</h1>
+    <p>Discover innovative irrigation solutions inspired by nature’s most delicate butterfly wings and flourishing gardens, tailored to keep your plants healthy and your garden vibrant year-round. Experience the blend of science, nature, and technology in every drop.</p>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to contact section">Get Started</button>
+  </section>
+
+  <section id="about" class="container" aria-labelledby="about-title">
+    <h2 id="about-title">About Plant Pop Irrigation</h2>
+    <p>Plant Pop Irrigation is a pioneer in sustainable garden care, specializing in custom-built irrigation systems that marry the delicate balance between water conservation and lush plant growth. We harness the gentle yet efficient patterns inspired by butterflies fluttering among the blooms, ensuring your garden receives water exactly when and where it needs it.</p>
+    <p>Our team of experts uses biomimicry principles to design irrigation installations that reciprocate nature’s harmony. By studying the movement and distribution efficiency of butterflies and native pollinators, we've revolutionized irrigation to minimize water wastage while maximizing plant health.</p>
+    <p>Our commitment goes beyond installation; we continuously innovate by integrating cutting-edge technology such as IoT-enabled sensors, solar-power integrations, and AI-driven water management systems to provide you seamless, worry-free irrigation solutions tailored to your garden's unique ecosystem.</p>
+    <p>Serving residential gardens, urban farms, commercial landscapes, and greenhouse operations, we understand that no two gardens are alike and customize every project to meet your soil, plant species, climate, and water source specifications.</p>
+  </section>
+
+  <section id="environmental-benefits" class="container new-topic" aria-labelledby="env-title">
+    <h2 id="env-title">Environmental Benefits of Efficient Irrigation</h2>
+    <p>Conserving water and protecting natural ecosystems are at the heart of Plant Pop’s philosophy. Efficient irrigation practices significantly reduce freshwater consumption, preserving local water tables and reducing strain on municipal supply systems.</p>
+    <p>By targeting water exactly where roots absorb moisture, runoff and evaporation are minimized, which means fewer pollutants and fertilizers leach into nearby waterways. This improves overall soil health and biodiversity.</p>
+    <p>Furthermore, our solar-powered irrigation options decrease reliance on fossil fuels, cutting your garden’s carbon footprint. These initiatives align your garden care with global sustainability goals, making it a contributing part of a healthier planet.</p>
+  </section>
+
+  <section id="challenges" class="container new-topic" aria-labelledby="challenges-title">
+    <h2 id="challenges-title">Common Irrigation Challenges and Solutions</h2>
+    <p>Gardeners often face problems such as uneven watering, clogged emitters, and fluctuating water pressure. These issues can stunt plant growth or cause unnecessary water waste.</p>
+    <p>Our diagnostic services identify root causes whether it be soil composition, irrigation system faults, or environmental factors. We then apply precise solutions like pressure regulators, timer adjustments, or system redesign to improve efficiency.</p>
+    <p>Additionally, our maintenance packages ensure your irrigation remains trouble-free year-round, preventing costly repairs and plant damage.</p>
+  </section>
+
+  <section id="choosing-system" class="container new-topic" aria-labelledby="choose-title">
+    <h2 id="choose-title">How to Choose the Right Irrigation System for Your Garden</h2>
+    <p>Each garden is unique in size, plant variety, and water requirements. Factors to consider include soil type, local climate, water source, and your maintenance preferences.</p>
+    <p>Drip irrigation works well for vegetable patches and flower beds by delivering water directly to roots. Sprinkler systems are ideal for lawns and large spaces requiring overhead watering. Smart controllers provide automated convenience by adapting watering schedules to weather and soil moisture.</p>
+    <p>Our experts guide you through assessing your garden’s needs and selecting systems that maximize efficiency and plant health while fitting your budget.</p>
+  </section>
+
+  <section id="seasonal-tips" class="container new-topic" aria-labelledby="seasonal-title">
+    <h2 id="seasonal-title">Seasonal Irrigation Tips for a Healthy Garden Year-Round</h2>
+    <p>Adjusting your irrigation approach according to seasons can significantly improve water use and plant resilience.</p>
+    <p>During spring and summer, increase watering frequency to support active growth but avoid overwatering which can cause root rot. Fall requires reducing water as plants prepare for dormancy, and winter watering may only be necessary during dry spells.</p>
+    <p>Regularly check sensors and automate schedules to comply with seasonal needs, ensuring optimal hydration without wasting resources.</p>
+  </section>
+
+  <section id="services" class="container" aria-labelledby="services-title">
+    <h2 id="services-title">Our Irrigation Services</h2>
+    <div class="grid-3" role="list">
+      <article class="card" role="listitem" aria-label="Drip Irrigation Installation">
+        <img src="s1.jpg" alt="Drip Irrigation System installation" loading="lazy" />
+        <h3>Drip Irrigation Installation</h3>
+        <p>Precision watering via drip tubing reduces water runoff and improves moisture uptake directly at the roots. Ideal for vegetable patches, flower beds, and container gardens, our drip irrigation systems are designed to deliver water efficiently, ensuring your plants thrive without excess water waste.</p>
+      </article>
+
+      <article class="card" role="listitem" aria-label="Soil Moisture Monitoring Setup">
+        <img src="s2.jpg" alt="Soil moisture sensors setup" loading="lazy" />
+        <h3>Soil Moisture Monitoring Setup</h3>
+        <p>Install advanced sensors to monitor soil hydration in real-time. Receive alerts and analytics through our smart app platform to optimize irrigation schedules efficiently. This service ensures that your plants receive the right amount of water at the right time, promoting healthy growth and reducing water waste.</p>
+      </article>
+
+      <article class="card" role="listitem" aria-label="Automated Sprinkler Systems">
+        <img src="s3.jpg" alt="Garden sprinkler irrigating" loading="lazy" />
+        <h3>Automated Sprinkler Systems</h3>
+        <p>State-of-the-art, programmable sprinklers designed to evenly distribute water with minimum waste. Perfect for lawns, landscapes, and flower gardens requiring scheduled watering. Our systems can be customized to fit the specific needs of your garden, ensuring optimal coverage and efficiency.</p>
+      </article>
+
+      <article class="card" role="listitem" aria-label="Smart Irrigation Control Installation">
+        <img src="s4.jpg" alt="Smart irrigation controller device" loading="lazy" />
+        <h3>Smart Irrigation Control Installation</h3>
+        <p>Integrate IoT-enabled controllers that adapt watering plans based on weather forecasts, season changes, and plant-specific needs, accessible from your smartphone or tablet. This technology allows for a more responsive and efficient irrigation system that can save you time and resources.</p>
+      </article>
+
+      <article class="card" role="listitem" aria-label="Solar-Powered Pump Solutions">
+        <img src="s5.jpg" alt="Solar panel powering irrigation pump" loading="lazy" />
+        <h3>Solar-Powered Pump Solutions</h3>
+        <p>Eco-conscious irrigation powered by solar energy reduces carbon footprints while maintaining consistent water pressure for your garden zones. Our solar solutions are designed to be efficient and sustainable, providing you with a reliable water source without the environmental impact.</p>
+      </article>
+
+      <article class="card" role="listitem" aria-label="Irrigation Maintenance & Repairs">
+        <img src="s6.jpg" alt="Technician fixing irrigation system" loading="lazy" />
+        <h3>Irrigation Maintenance & Repairs</h3>
+        <p>Regular upkeep to prevent leaks, blockages, and sensor malfunctions. Our technicians ensure your irrigation system operates at peak efficiency all year round. We offer comprehensive maintenance plans tailored to your system's needs, ensuring longevity and reliability.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="pricing" class="container" aria-labelledby="pricing-title">
+    <h2 id="pricing-title">Service Pricing</h2>
+    <p>We offer transparent pricing plans for all our irrigation services to suit your budget and garden needs. Custom quotes available for large-scale or specialized projects. Our pricing is designed to be competitive while ensuring the highest quality of service and materials.</p>
+    <table class="pricing-table" role="table" aria-describedby="pricing-explained">
+      <caption id="pricing-explained" class="sr-only">Pricing details for various irrigation services</caption>
+      <thead>
+        <tr>
+          <th scope="col">Service</th>
+          <th scope="col">Starting Price (USD)</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Drip Irrigation Installation</td>
+          <td>$300</td>
+          <td>Includes materials and labor for up to 300 sq. ft. garden area.</td>
+        </tr>
+        <tr>
+          <td>Soil Moisture Monitoring Setup</td>
+          <td>$450</td>
+          <td>Installation of sensors with app integration for real-time data.</td>
+        </tr>
+        <tr>
+          <td>Automated Sprinkler Systems</td>
+          <td>$500</td>
+          <td>Full system installation including programmable timers.</td>
+        </tr>
+        <tr>
+          <td>Smart Irrigation Control Installation</td>
+          <td>$400</td>
+          <td>IoT-based smart controllers with weather adaptive technology.</td>
+        </tr>
+        <tr>
+          <td>Solar-Powered Pump Solutions</td>
+          <td>$1200</td>
+          <td>Green energy pumps suitable for medium to large gardens.</td>
+        </tr>
+        <tr>
+          <td>Irrigation Maintenance & Repairs</td>
+          <td>Starting at $150</td>
+          <td>Includes diagnostics and repairs for all irrigation components.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gallery" class="container" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Gallery of Our Work</h2>
+    <p>Explore our recent projects and installations showcasing healthy gardens thriving with our irrigation systems. Each image reflects our commitment to quality and the beauty of well-maintained landscapes.</p>
+    <div class="gallery" role="list">
+      <img src="g1.jpg" alt="Close up of garden flowers with sunlight" loading="lazy" role="listitem" />
+      <img src="g2.jpg" alt="Drip irrigation tubes in a garden" loading="lazy" role="listitem" />
+      <img src="g3.jpg" alt="Drip irrigation system installation" loading="lazy" role="listitem" />
+      <img src="g4.jpg" alt="Soil moisture sensors setup" loading="lazy" role="listitem" />
+      <img src="g5.jpg" alt="Garden sprinkler irrigating" loading="lazy" role="listitem" />
+      <img src="g6.jpg" alt="Smart irrigation controller device" loading="lazy" role="listitem" />
+      <img src="g7.jpg" alt="Solar panel powering irrigation pump" loading="lazy" role="listitem" />
+      <img src="g8.jpg" alt="Technician fixing irrigation system" loading="lazy" role="listitem" />
+      <img src="g9.jpg" alt="Butterfly on flower" loading="lazy" role="listitem" />
+      <img src="g10.jpg" alt="Blooming garden plants" loading="lazy" role="listitem" />
+     
+    </div>
+  </section>
+
+  <section class="customer-satisfaction" aria-label="Customer satisfaction and testimonials">
+    <h2>Customer Satisfaction & Testimonials</h2>
+    <p>We pride ourselves on maintaining a 98%+ customer satisfaction rate. Our clients appreciate the attention to detail, promptness, and the remarkable health of their gardens thanks to our services. Here are some testimonials from our satisfied customers:</p>
+    <p>"The Plant Pop Irrigation team transformed my backyard garden – plants never looked healthier, and my water bills dropped!" <br>- Emily R., New York</p>
+    <p>"Their smart irrigation technologies saved me so much time and effort. Highly recommend for all garden lovers." <br>- Michael D., Brooklyn</p>
+    <p>"I was amazed at how quickly they installed my new system. The team was professional and knowledgeable, and my garden has never looked better!" <br>- Sarah T., Los Angeles</p>
+    <p>"The customer service was exceptional, and the results speak for themselves. I love my new irrigation system!" <br>- David L., Chicago</p>
+  </section>
+
+  <section class="disclaimer" aria-label="Disclaimer">
+    <p>Disclaimer: Prices indicated are starting prices and may vary based on garden size, complexity, and customization. We recommend a site survey for accurate quotes. Plant Pop Irrigation is not liable for plant health affected by unforeseen environmental conditions or improper maintenance outside our service scope.</p>
+  </section>
+
+  <section id="contact" class="container" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Us</h2>
+    <p>Address: 70 Washington Square South, New York, NY 10012, United States</p>
+    <p>Phone: <a href="tel:+18187660103">+1 (818) 766-0103</a></p>
+    <p>Email: <a href="mailto:info@plantpopirrigation.com">info@plantpopirrigation.com</a></p>
+    <p>We look forward to helping you create a thriving garden with our innovative irrigation solutions!</p>
+  </section>
+</main>
+
+<footer role="contentinfo" aria-label="Site footer">
+  <p>Plant Pop Irrigation &copy; 2024</p>
+  <address>
+    70 Washington Square South, New York, NY 10012, United States<br/>
+    Phone: <a href="tel:+18187660103" style="color:inherit;">+1 (818) 766-0103</a>
+  </address>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms and Conditions - Plant Pop Irrigation</title>
+<style>
+  /* Color and typography variables for butterfly + garden theme */
+  :root {
+    --primary-green: #3a6b35;
+    --highlight-pink: #e89ab9;
+    --soft-purple: #a886c4;
+    --butterfly-yellow: #f6d258;
+    --neutral-gray: #6b7280;
+    --background: #ffffff;
+    --card-bg: #f9f9fb;
+    --shadow: rgba(58, 107, 53, 0.12);
+    --border-radius: 12px;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap');
+
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    font-family: var(--font-body);
+    color: var(--neutral-gray);
+    line-height: 1.6;
+    font-size: 17px;
+    text-align: center;
+  }
+  a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--highlight-pink);
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    margin-top: 0;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-top: 3rem;
+  }
+  h3 {
+    font-weight: 600;
+    color: var(--soft-purple);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  h4 {
+    font-weight: 600;
+    color: var(--highlight-pink);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  p {
+    max-width: 850px;
+    margin: 0.7rem auto 1.2rem auto;
+    text-align: left;
+  }
+  ul, ol {
+    max-width: 850px;
+    margin: 0.5rem auto 1rem auto;
+    padding-left: 1.6rem;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 0 5rem 0;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    gap: 2rem;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: var(--highlight-pink);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a[aria-current="page"]::after {
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #d3e9d7 30%, #fce0ec 75%);
+    padding: 5rem 1rem 7rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px var(--shadow);
+    user-select: none;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    color: var(--soft-purple);
+    max-width: 800px;
+    margin: 1.4rem auto 0 auto;
+  }
+  .btn-primary {
+    background: var(--primary-green);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 6px 14px rgba(58,107,53,0.3);
+    display: inline-block;
+    margin-top: 3rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--highlight-pink);
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(232,154,185,0.5);
+  }
+
+  /* Terms content cards */
+  .content-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 6px 25px var(--shadow);
+    text-align: left;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--primary-green);
+    color: white;
+    padding: 3rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    user-select: none;
+  }
+  footer p,
+  footer address {
+    margin: 0.4rem 0;
+  }
+  footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+      padding-top: 2rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+    }
+    .content-card {
+      padding: 2rem 1.5rem;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 1.2rem;
+      font-size: 1.15rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0">Plant Pop Irrigation</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" role="banner" aria-labelledby="hero-title">
+    <h1 id="hero-title">Terms and Conditions</h1>
+    <p>Welcome to Plant Pop Irrigation. These Terms and Conditions govern your use of our website and services. Please read them carefully to understand your rights and responsibilities when using our platform.</p>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to contact section">Contact Us</button>
+  </section>
+
+  <section class="container" aria-label="Terms and conditions content" style="margin-top: 3rem;">
+    <article class="content-card" aria-labelledby="intro-title">
+      <h2 id="intro-title">1. Introduction</h2>
+      <p>Welcome to Plant Pop Irrigation. These Terms and Conditions (“Terms”) govern your access and use of our services, including our website, applications, and related services (collectively “Services”).</p>
+      <p>By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to all terms, please do not use our Services.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="eligibility-title">
+      <h2 id="eligibility-title">2. Eligibility and Account Registration</h2>
+      <p>You must be at least 18 years old or of legal age in your jurisdiction to enter into binding contracts to use our Services.</p>
+      <p>When you create an account, you agree to provide accurate and complete information. You are responsible for maintaining the confidentiality of your account credentials and for all activities performed through your account.</p>
+      <p>You agree to notify us immediately of any unauthorized use of your account or security breaches.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="service-use-title">
+      <h2 id="service-use-title">3. Use of Services</h2>
+      <p>You agree to use our Services only for lawful purposes and in accordance with these Terms. Prohibited uses include, but are not limited to:</p>
+      <ul>
+        <li>Violating any local, state, national, or international law.</li>
+        <li>Attempting to disrupt or interfere with the security or proper functioning of our platform.</li>
+        <li>Engaging in fraudulent or deceptive activities.</li>
+        <li>Posting or transmitting harmful, hateful, or offensive content.</li>
+        <li>Using automated means to access or harvest data from our Services without permission.</li>
+      </ul>
+      <p>We reserve the right to monitor your use and suspend or terminate accounts if violations occur.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="payments-title">
+      <h2 id="payments-title">4. Payment and Pricing</h2>
+      <p>All prices for our irrigation services are listed in U.S. dollars and are exclusive of taxes unless otherwise stated.</p>
+      <p>You agree to pay any fees associated with your use of the Services in a timely fashion. Payment methods accepted include credit/debit cards and authorized third-party processors.</p>
+      <p>We reserve the right to change prices, descriptions, or availability of services, provided that such changes do not affect confirmed orders without notice.</p>
+      <p>Invoices and receipts will be provided electronically where applicable.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="intellectual-property-title">
+      <h2 id="intellectual-property-title">5. Intellectual Property</h2>
+      <p>All intellectual property rights in the Services, including software, designs, logos, content, and trademarks, are owned by Plant Pop Irrigation or our licensors.</p>
+      <p>You may not use, reproduce, or distribute any such materials without prior written permission.</p>
+      <p>Any feedback or suggestions you provide may be used by us without restriction.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="user-responsibilities-title">
+      <h2 id="user-responsibilities-title">6. User Responsibilities</h2>
+      <p>You are responsible for all activity under your account, compliance with applicable laws, and for ensuring the security of your devices.</p>
+      <p>It is your obligation to use our Services carefully, not to misuse or overburden them, and to report issues or misuse.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="limitations-title">
+      <h2 id="limitations-title">7. Limitations of Liability</h2>
+      <p>To the maximum extent permitted by law, Plant Pop Irrigation will not be liable for indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Services.</p>
+      <p>We do not guarantee uninterrupted or error-free service and disclaim liability for any damages caused by delays, failures, or loss of data.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="warranties-title">
+      <h2 id="warranties-title">8. Warranties and Disclaimers</h2>
+      <p>Our Services are provided "as is" without warranties of any kind, unless required by applicable law.</p>
+      <p>We disclaim all implied warranties including merchantability, fitness for a particular purpose, and non-infringement.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="termination-title">
+      <h2 id="termination-title">9. Termination and Suspension</h2>
+      <p>We may suspend or terminate your access to the Services at our discretion for violations of these Terms or any applicable laws.</p>
+      <p>Upon termination, rights granted to you will immediately cease and any outstanding fees will remain due.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="law-dispute-title">
+      <h2 id="law-dispute-title">10. Governing Law and Dispute Resolution</h2>
+      <p>These Terms are governed by the laws of the State of New York, United States.</p>
+      <p>Disputes arising from these Terms will be resolved first by good-faith negotiation and, if unresolved, through binding arbitration in New York.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="changes-title">
+      <h2 id="changes-title">11. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms at any time. We will notify users of material changes via our website or email.</p>
+      <p>Your continued use of our Services after changes constitutes acceptance of the updated Terms.</p>
+      <p>We recommend reviewing this page periodically.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="privacy-ref-title">
+      <h2 id="privacy-ref-title">12. Privacy and Data Protection</h2>
+      <p>Your privacy is extremely important to us. Please review our <a href="privacy.html">Privacy Policy</a> to understand how we collect, use, and protect your information.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="contact-info-title">
+      <h2 id="contact-info-title">13. Contact Information</h2>
+      <p>If you have questions about these Terms, please contact us:</p>
+      <ul>
+        <li><strong>Address:</strong> 70 Washington Square South, New York, NY 10012, United States</li>
+        <li><strong>Email:</strong> <a href="mailto:terms@plantpopirrigation.com">terms@plantpopirrigation.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+18187660103">+1 (818) 766-0103</a></li>
+      </ul>
+    </article>
+
+    <article class="content-card" aria-labelledby="extended-faq-title">
+      <h2 id="extended-faq-title">14. Extended FAQs on Terms</h2>
+
+      <h3>What constitutes acceptance of these Terms?</h3>
+      <p>Using our Services signifies you agree to these Terms in full.</p>
+
+      <h3>Can I cancel my account or services?</h3>
+      <p>Yes, you may cancel services subject to any applicable notice or fees explained in specific service agreements.</p>
+
+      <h3>What happens if a term is found invalid?</h3>
+      <p>If any part of these Terms is invalid, the remainder shall remain in full effect.</p>
+
+      <h3>Are the Terms applicable to third-party integrations?</h3>
+      <p>Third-party services used in conjunction with ours may have separate terms and are your responsibility.</p>
+
+      <h3>How will I be notified of changes?</h3>
+      <p>Material changes are communicated by website notification or direct email where possible.</p>
+
+      <h3>Can we update pricing at any time?</h3>
+      <p>Pricing changes may occur but will not affect confirmed orders without notice.</p>
+
+      <h3>Who owns the data I submit?</h3>
+      <p>You retain ownership; we use data to provide and improve services under these Terms and the Privacy Policy.</p>
+
+      <h3>What laws apply if I use the Services outside the U.S.?</h3>
+      <p>The governing law is as stated; however, local laws may also apply and should be reviewed independently.</p>
+
+      <h3>How is my content protected?</h3>
+      <p>We take reasonable precautions but you should maintain backups; content removal may happen only under legal requirements.</p>
+
+      <h3>How do I contact customer support?</h3>
+      <p>Email or call using the contact information above for any issues or questions.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="miscellaneous-title">
+      <h2 id="miscellaneous-title">15. Miscellaneous</h2>
+      <p>These Terms, along with the Privacy Policy and any other agreements, constitute the entire agreement between you and Plant Pop Irrigation regarding your use of the Services.</p>
+      <p>No waiver of any provision shall be effective unless in writing. Failure to enforce any right shall not constitute a waiver.</p>
+      <p>Headings are for convenience only and do not affect interpretation.</p>
+      <p>We may assign, transfer, or subcontract our rights and obligations without your consent.</p>
+    </article>
+  </section>
+
+  <section id="contact" class="container" aria-labelledby="contact-title" style="margin-bottom: 4rem;">
+    <h2 id="contact-title">Contact Us</h2>
+    <p>Address: 70 Washington Square South, New York, NY 10012, United States</p>
+    <p>Phone: <a href="tel:+18187660103">+1 (818) 766-0103</a></p>
+    <p>Email: <a href="mailto:terms@plantpopirrigation.com">terms@plantpopirrigation.com</a></p>
+  </section>
+</main>
+
+<footer role="contentinfo" aria-label="Site footer">
+  <p>Plant Pop Irrigation &copy; 2024</p>
+  <address>
+    70 Washington Square South, New York, NY 10012, United States<br/>
+    Phone: <a href="tel:+18187660103" style="color:inherit;">+1 (818) 766-0103</a>
+  </address>
+</footer>
+
+</body>
+</html>

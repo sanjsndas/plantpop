@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - Plant Pop Irrigation</title>
+<style>
+  :root {
+    --primary-green: #3a6b35;
+    --highlight-pink: #e89ab9;
+    --soft-purple: #a886c4;
+    --butterfly-yellow: #f6d258;
+    --neutral-gray: #6b7280;
+    --background: #ffffff;
+    --card-bg: #f9f9fb;
+    --shadow: rgba(58, 107, 53, 0.12);
+    --border-radius: 12px;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap');
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    font-family: var(--font-body);
+    color: var(--neutral-gray);
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--highlight-pink);
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    margin-top: 0;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-top: 2.5rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    color: var(--soft-purple);
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--highlight-pink);
+    margin-top: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  p {
+    max-width: 850px;
+    margin: 0.8rem auto 1.4rem auto;
+    text-align: left;
+  }
+  ul, ol {
+    max-width: 850px;
+    margin: 0.5rem auto 1.2rem auto;
+    padding-left: 1.6rem;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 0 6rem 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    gap: 2rem;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: var(--highlight-pink);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a[aria-current="page"]::after {
+    width: 100%;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #d3e9d7 30%, #fce0ec 75%);
+    padding: 6rem 1rem 8rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px var(--shadow);
+    user-select: none;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 1.35rem;
+    color: var(--soft-purple);
+    max-width: 880px;
+    margin: 1.8rem auto 0 auto;
+  }
+  .btn-primary {
+    background: var(--primary-green);
+    color: white;
+    font-weight: 700;
+    padding: 1.2rem 3.5rem;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 6px 14px rgba(58,107,53,0.3);
+    margin-top: 3.5rem;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background-color: var(--highlight-pink);
+    transform: scale(1.06);
+    box-shadow: 0 10px 35px rgba(232,154,185,0.5);
+  }
+
+  .content-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 3rem 4rem;
+    margin-bottom: 3.8rem;
+    box-shadow: 0 6px 30px var(--shadow);
+    text-align: left;
+  }
+
+  /* Form Styles */
+  form {
+    max-width: 700px;
+    margin: 2rem auto 3rem auto;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--primary-green);
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1.5px solid #c7c7c7;
+    background: #fff;
+    color: var(--neutral-gray);
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+    border-color: var(--highlight-pink);
+    outline: none;
+  }
+  textarea {
+    min-height: 160px;
+    line-height: 1.4;
+  }
+  button[type="submit"] {
+    background: var(--primary-green);
+    color: white;
+    padding: 1rem 3rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    margin-top: 1.5rem;
+  }
+  button[type="submit"]:hover {
+    background-color: var(--highlight-pink);
+    transform: scale(1.05);
+  }
+
+  footer {
+    background: var(--primary-green);
+    color: white;
+    padding: 3.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    user-select: none;
+    margin-top: 4rem;
+  }
+  footer p,
+  footer address {
+    margin: 0.45rem 0;
+  }
+  footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 850px) {
+    .content-card {
+      padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+      padding-top: 2rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    form {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .btn-primary {
+      width: 100%;
+      padding: 1.1rem;
+      font-size: 1.1rem;
+      margin-top: 2.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0">Plant Pop Irrigation</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="privacy.html" tabindex="0">Privacy</a>
+      <a href="terms.html" tabindex="0">Terms & Conditions</a>
+      <a href="cookies.html" tabindex="0">Cookies</a>
+      <a href="contact.html" tabindex="0" aria-current="page">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" role="banner" aria-labelledby="hero-title">
+    <h1 id="hero-title">Get in Touch with Plant Pop Irrigation</h1>
+    <p>We’d love to hear from you! Whether you have questions about our irrigation solutions, need expert advice on your garden, want to schedule a service, or just want to say hello, you’re in the right place.</p>
+    <button class="btn-primary" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to contact form">Contact Us Now</button>
+  </section>
+
+  <section class="container">
+    <article class="content-card" aria-labelledby="contact-info-title">
+      <h2 id="contact-info-title">Our Contact Information</h2>
+      <p><strong>Address:</strong> 70 Washington Square South, New York, NY 10012, United States</p>
+      <p><strong>Phone:</strong> <a href="tel:+18187660103">+1 (818) 766-0103</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@plantpopirrigation.com">contact@plantpopirrigation.com</a></p>
+      <p>Our office hours are Monday through Friday, 9 AM to 6 PM EST. We are committed to providing timely, professional, and friendly customer support to assist you with any inquiries or requests.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title">Send Us a Message</h2>
+      <form id="contact-form" action="#" method="POST" aria-label="Contact form">
+        <label for="name">Full Name<span aria-hidden="true" style="color:#e89ab9;"> *</span></label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+        <label for="email">Email Address<span aria-hidden="true" style="color:#e89ab9;"> *</span></label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 555 0123" />
+
+        <label for="subject">Subject<span aria-hidden="true" style="color:#e89ab9;"> *</span></label>
+        <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
+
+        <label for="message">Message<span aria-hidden="true" style="color:#e89ab9;"> *</span></label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit" aria-label="Send message">Send Message</button>
+      </form>
+      <p><em>Please note: This is a static demo form. In a live environment, form submissions would be processed accordingly.</em></p>
+    </article>
+
+    <article class="content-card" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+
+      <h3>How can I schedule an irrigation installation service?</h3>
+      <p>Simply contact us via phone, email, or the form above. Our customer service team will guide you through a consultation and scheduling process tailored to your garden’s needs.</p>
+
+      <h3>What areas do you serve?</h3>
+      <p>We currently serve the New York metropolitan area including Manhattan, Brooklyn, Queens, the Bronx, and Staten Island. Expansion plans are underway to reach neighboring regions.</p>
+
+      <h3>Do you offer consultations for commercial projects?</h3>
+      <p>Yes. We provide professional consultation and custom irrigation solutions for residential, commercial, and agricultural projects with scalable service options.</p>
+
+      <h3>What irrigation technologies do you specialize in?</h3>
+      <p>Our expertise includes drip irrigation systems, automated sprinklers, soil moisture sensors, smart controllers, and solar-powered pumping solutions.</p>
+
+      <h3>Can you maintain existing irrigation systems?</h3>
+      <p>Absolutely. We offer maintenance, repairs, and upgrades to ensure your current irrigation system operates efficiently and effectively year-round.</p>
+
+      <h3>Is your service environmentally friendly?</h3>
+      <p>Yes. We prioritize water conservation, sustainable energy use, and eco-conscious installation practices rooted in biomimicry principles inspired by nature.</p>
+
+      <h3>What payment methods do you accept?</h3>
+      <p>We accept major credit and debit cards, bank transfers, and certain digital payment options. Invoices are provided upon request.</p>
+
+      <h3>How long does an installation typically take?</h3>
+      <p>Most residential installations are completed within 1 to 3 days depending on project size and complexity. Large or commercial projects are scheduled accordingly with detailed timelines.</p>
+
+      <h3>Do you provide warranties or guarantees?</h3>
+      <p>We offer warranties on our equipment and workmanship. Details vary by service type and will be outlined in your service contract.</p>
+
+      <h3>How can I request a service quote?</h3>
+      <p>Contact us through the form or by phone and provide details about your garden or landscape. We will arrange a survey and provide a comprehensive quote.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="tips-title">
+      <h2 id="tips-title">Gardening & Irrigation Tips From Our Experts</h2>
+
+      <h3>Timing is Everything: Water Your Plants Smartly</h3>
+      <p>Water plants early in the morning or late in the evening to maximize absorption and reduce evaporation. Avoid watering during peak sun hours.</p>
+
+      <h3>Use Mulch to Retain Moisture</h3>
+      <p>Applying organic mulch helps the soil retain moisture, reduce weeds, and regulate temperature, complementing your irrigation system’s efficiency.</p>
+
+      <h3>Soil Health Matters</h3>
+      <p>Regularly check and amend soil with compost or nutrients to promote healthy root systems that utilize water optimally.</p>
+
+      <h3>Choose the Right Plants for Your Climate</h3>
+      <p>Native or drought-tolerant plants require less water and maintenance, making them ideal for sustainable gardening with efficient irrigation.</p>
+
+      <h3>Regular System Check-ups</h3>
+      <p>Schedule periodic maintenance of your irrigation to spot leaks, clogged emitters, or misaligned sprinklers that waste water.</p>
+
+      <h3>Embrace Smart Technology</h3>
+      <p>Smart controllers and sensors adapt watering schedules based on weather forecasts and soil moisture, saving water and time.</p>
+
+      <h3>Monitor Water Usage</h3>
+      <p>Keep an eye on monthly water bills to understand your consumption patterns and adjust irrigation accordingly.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="feedback-title">
+      <h2 id="feedback-title">We Value Your Feedback</h2>
+      <p>Your opinions help us grow and serve you better. Feel free to send us suggestions, testimonials, or any insights about our products and services.</p>
+      <p>Connect with us on social media platforms or send a message via the contact form above!</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="careers-title">
+      <h2 id="careers-title">Join Our Team</h2>
+      <p>Interested in working with a passionate and innovative irrigation company? Explore our current career openings:</p>
+      <ul>
+        <li>Irrigation Technician</li>
+        <li>Landscape Design Consultant</li>
+        <li>Customer Support Representative</li>
+        <li>Sales and Marketing Specialist</li>
+        <li>Software Engineer for Smart Systems</li>
+      </ul>
+      <p>Send your resume and cover letter to <a href="mailto:careers@plantpopirrigation.com">careers@plantpopirrigation.com</a> and become part of the green revolution!</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="news-title">
+      <h2 id="news-title">Latest News & Updates</h2>
+      <p>Stay tuned with our blog and newsletters for:</p>
+      <ul>
+        <li>Seasonal irrigation tips</li>
+        <li>New product launches</li>
+        <li>Success stories from our clients</li>
+        <li>Community gardening events</li>
+        <li>Innovations in smart irrigation technology</li>
+      </ul>
+      <p>Subscribe to our newsletter via the form on our homepage or contact us for updates.</p>
+    </article>
+
+  </section>
+
+  <section id="contact-info" class="container" aria-labelledby="contact-section-title" style="margin-bottom: 6rem;">
+    <h2 id="contact-section-title">Official Contact Information</h2>
+    <p><strong>Address:</strong> 70 Washington Square South, New York, NY 10012, United States</p>
+    <p><strong>Phone:</strong> <a href="tel:+18187660103">+1 (818) 766-0103</a></p>
+    <p><strong>Email:</strong> <a href="mailto:contact@plantpopirrigation.com">contact@plantpopirrigation.com</a></p>
+  </section>
+</main>
+
+<footer role="contentinfo" aria-label="Site footer">
+  <p>Plant Pop Irrigation &copy; 2024</p>
+  <address>
+    70 Washington Square South, New York, NY 10012, United States<br/>
+    Phone: <a href="tel:+18187660103" style="color:inherit;">+1 (818) 766-0103</a>
+  </address>
+</footer>
+
+</body>
+</html>
+

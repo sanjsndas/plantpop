@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Plant Pop Irrigation</title>
+<style>
+  :root {
+    --primary-green: #3a6b35;
+    --highlight-pink: #e89ab9;
+    --soft-purple: #a886c4;
+    --butterfly-yellow: #f6d258;
+    --neutral-gray: #6b7280;
+    --background: #ffffff;
+    --card-bg: #f9f9fb;
+    --shadow: rgba(58, 107, 53, 0.15);
+    --border-radius: 12px;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    background: var(--background);
+    font-family: var(--font-body);
+    color: var(--neutral-gray);
+    line-height: 1.7;
+    font-size: 17px;
+    text-align: center;
+  }
+  a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--highlight-pink);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    margin-top: 0;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    margin-top: 1.3rem;
+    color: var(--soft-purple);
+  }
+  p {
+    margin: 0.8rem auto 1.2rem auto;
+    max-width: 860px;
+    text-align: left;
+  }
+  ul, ol {
+    max-width: 860px;
+    margin: 0.5rem auto 1rem auto;
+    padding-left: 1.5rem;
+    text-align: left;
+    color: var(--neutral-gray);
+    font-size: 16px;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 0 5rem 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    gap: 2rem;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: var(--highlight-pink);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #d3e9d7 30%, #fce0ec 75%);
+    padding: 5rem 1rem 6rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 38px var(--shadow);
+    user-select: none;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 1.4rem;
+    color: var(--soft-purple);
+    max-width: 800px;
+    margin: 1rem auto 0 auto;
+  }
+  .btn-primary {
+    background: var(--primary-green);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(58,107,53,0.3);
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--highlight-pink);
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(232,154,185,0.5);
+  }
+
+  .content-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 6px 22px var(--shadow);
+    text-align: left;
+  }
+
+  footer {
+    background: var(--primary-green);
+    color: white;
+    padding: 2.5rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    user-select: none;
+  }
+  footer p, footer address {
+    margin: 0.35rem 0;
+  }
+  footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2.2rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    .content-card {
+      padding: 1.5rem 1.8rem;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 1.2rem;
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0">Plant Pop Irrigation</div>
+    <div class="nav-links" role="navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0" aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" role="banner" aria-labelledby="hero-title">
+    <h1 id="hero-title">Your Privacy Matters at Plant Pop Irrigation</h1>
+    <p>We nurture your trust as carefully as a butterfly flutters over a garden — with deep respect for your privacy, transparency, and control over your data.</p>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to contact section">Contact Us</button>
+  </section>
+
+  <section class="container" aria-label="Privacy policy content" style="margin-top: 3rem;">
+    <article class="content-card" aria-labelledby="intro-title">
+      <h2 id="intro-title">Introduction</h2>
+      <p>At Plant Pop Irrigation, we understand that your personal data is precious, and we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, share, and protect your information when you interact with our websites, services, and communications.</p>
+      <p>This comprehensive document also informs you of your rights, choices, and our responsibilities in ensuring the security and confidentiality of your data.</p>
+      <p>Our policies are inspired by nature's balance — as butterflies rely on flowers and gardens to flourish, our relationship with you is based on trust, respect, and mutual benefit.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="info-collection-title">
+      <h2 id="info-collection-title">Information We Collect</h2>
+      <p>We gather information you provide to us directly as well as data collected automatically to improve your experience, service, and security.</p>
+      <h3>1. Personal Information You Provide</h3>
+      <p>This includes but is not limited to:</p>
+      <ul>
+        <li>Contact details like name, email address, phone number, and mailing address.</li>
+        <li>Payment and billing information necessary for service transactions.</li>
+        <li>Account creation credentials and profile preferences.</li>
+        <li>Communication data when you contact us via phone, email, or social platforms.</li>
+      </ul>
+      <h3>2. Information Collected Automatically</h3>
+      <p>When you use our website or services, we may collect information including:</p>
+      <ul>
+        <li>IP address, browser type, device information, and operating system.</li>
+        <li>Usage data such as pages visited, time spent, referral sources, and interactions.</li>
+        <li>Cookies and tracking technologies explained below.</li>
+      </ul>
+    </article>
+
+    <article class="content-card" aria-labelledby="use-info-title">
+      <h2 id="use-info-title">Use of Your Information</h2>
+      <p>Your information powers our mission to provide outstanding, personalized irrigation services while ensuring security and compliance.</p>
+      <h3>Purposes Include:</h3>
+      <ul>
+        <li>Facilitating account creation, service delivery, billing, and customer support.</li>
+        <li>Improving website functionality, user experience, and tailoring content to your interests.</li>
+        <li>Sending you updates, newsletters, promotions, and service notifications with your consent.</li>
+        <li>Conducting analytics to understand how our services are used and ways to enhance them.</li>
+        <li>Preventing, detecting, and addressing fraud, security issues, and legal compliance.</li>
+        <li>Engaging with you for feedback to continually cultivate trust and satisfaction.</li>
+      </ul>
+    </article>
+
+    <article class="content-card" aria-labelledby="cookies-tracking-title">
+      <h2 id="cookies-tracking-title">Cookies and Tracking Technologies</h2>
+      <p>Like the delicate patterns on butterfly wings, our use of cookies creates a seamless interaction while respecting your privacy.</p>
+      <h3>What Are Cookies?</h3>
+      <p>Cookies are small text files stored on your device that help websites remember information such as login status, preferences, and analytic data.</p>
+      <h3>Our Use of Cookies Includes:</h3>
+      <ul>
+        <li><strong>Essential Cookies:</strong> Required for site security and function.</li>
+        <li><strong>Performance Cookies:</strong> Collect anonymous data to optimize site speed and usage.</li>
+        <li><strong>Functional Cookies:</strong> Remember preferences like language and regional settings.</li>
+        <li><strong>Advertising Cookies:</strong> Used by third parties to display relevant ads respecting your choices.</li>
+      </ul>
+      <p>You can manage cookie preferences through your browser settings or via cookie banners where applicable.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="data-sharing-title">
+      <h2 id="data-sharing-title">Data Sharing and Disclosure</h2>
+      <p>We do not sell your personal data. Data sharing is limited to trusted entities to support our service or comply with legal obligations.</p>
+      <h3>Who We Share Data With:</h3>
+      <ul>
+        <li>Service providers assisting with payments, analytics, hosting, and communications.</li>
+        <li>Compliance authorities if legally compelled or for protection against fraud/abuse.</li>
+        <li>Business partners when authorized by you or under contractual obligation to protect your data.</li>
+      </ul>
+      <p>All third parties are contractually required to keep your information confidential and use it solely for the agreed purposes.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="data-security-title">
+      <h2 id="data-security-title">Data Security Measures</h2>
+      <p>As guardians of your data, we employ multi-layered security inspired by nature’s protective mechanisms.</p>
+      <ul>
+        <li>Encrypted transmission using TLS for all data between your device and our servers.</li>
+        <li>Secure server environments with strict access controls and regular vulnerability testing.</li>
+        <li>Authentication protocols and periodic audits to prevent unauthorized access.</li>
+        <li>Employee training and data handling policies ensuring confidentiality.</li>
+      </ul>
+      <p>Despite best efforts, no system is perfectly secure; we advise responsible data sharing and immediate notification of any suspicious activity.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="user-rights-title">
+      <h2 id="user-rights-title">Your Rights and Choices</h2>
+      <p>You have rights regarding your personal data and how it is used, reflecting our commitment to transparency and empowerment.</p>
+      <h3>Rights You Can Exercise:</h3>
+      <ul>
+        <li><strong>Access:</strong> Request copies of personal data we hold.</li>
+        <li><strong>Correction:</strong> Update or amend inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Request removal of your data where legally permissible.</li>
+        <li><strong>Restriction:</strong> Limit processing or usage of your information.</li>
+        <li><strong>Objection:</strong> Opt-out of certain uses such as marketing communications.</li>
+        <li><strong>Data Portability:</strong> Obtain your data in a structured format for transfer elsewhere.</li>
+      </ul>
+      <p>To exercise these rights, please contact us at the provided email or physical address. We strive to respond promptly and transparently.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="third-party-services-title">
+      <h2 id="third-party-services-title">Third-Party Services</h2>
+      <p>We integrate some third-party services to enhance your experience, such as analytics, payment gateways, and customer support tools.</p>
+      <p>These partners may collect your data within the scope of our service or their privacy policies, which we encourage you to review directly.</p>
+      <p>We carefully select partners based on strong privacy and security standards aligning with our commitments.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="data-retention-title">
+      <h2 id="data-retention-title">Data Retention Periods</h2>
+      <p>We retain your personal data only as long as necessary for fulfilling services, legal obligations, or legitimate business interests.</p>
+      <p>Once data is no longer needed, it is securely deleted or anonymized, ensuring it can no longer identify you.</p>
+      <p>Retention periods vary by data type and purpose; full details can be requested from our Privacy Office.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="intl-transfers-title">
+      <h2 id="intl-transfers-title">International Data Transfers</h2>
+      <p>Your information may occasionally be transferred across borders for processing or storage, especially when using cloud or global service providers.</p>
+      <p>We ensure such transfers comply with applicable legal frameworks protecting your data rights, such as GDPR's Standard Contractual Clauses or similar mechanisms.</p>
+      <p>You have the right to inquire about cross-border data flow and applicable protections.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="childrens-privacy-title">
+      <h2 id="childrens-privacy-title">Children’s Privacy</h2>
+      <p>We do not knowingly collect information from children under the age of 13 (or applicable age depending on your locale) without verifiable parental consent.</p>
+      <p>If you believe we have inadvertently collected child data without consent, please contact us immediately for removal.</p>
+      <p>Our services are primarily intended for adult users making garden irrigation decisions.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="policy-updates-title">
+      <h2 id="policy-updates-title">Policy Updates and Changes</h2>
+      <p>Our privacy policy evolves with changing technology and regulations. Significant amendments will be communicated via website notices or direct notification where appropriate.</p>
+      <p>Continued use of our services after updates implies acceptance of the revised policy.</p>
+      <p>We encourage regular review of this page to stay informed on your rights and our practices.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="contact-info-title">
+      <h2 id="contact-info-title">Contact Information</h2>
+      <p>If you have questions, complaints, or require assistance regarding your privacy or data protection, please contact us:</p>
+      <ul>
+        <li><strong>Address:</strong> 70 Washington Square South, New York, NY 10012, United States</li>
+        <li><strong>Email:</strong> <a href="mailto:privacy@plantpopirrigation.com">privacy@plantpopirrigation.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+18187660103">+1 (818) 766-0103</a></li>
+      </ul>
+      <p>We are committed to responding promptly and thoroughly.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="extended-faq-title">
+      <h2 id="extended-faq-title">Extended Privacy FAQs</h2>
+
+      <h3>What personal information does Plant Pop Irrigation collect?</h3>
+      <p>We collect information you knowingly provide such as your contact details and service requests, as well as technical data collected automatically during your visits.</p>
+
+      <h3>How is my information used?</h3>
+      <p>Primarily for service delivery, customer support, communications, legal compliance, and improving our offerings.</p>
+
+      <h3>How do you protect my data?</h3>
+      <p>Through encryption, secure systems, restricted access, trained staff, and ongoing security audits.</p>
+
+      <h3>Can I control the cookies on your site?</h3>
+      <p>Yes, you can manage or disable cookies through your browser or via provided cookie consent options.</p>
+
+      <h3>Will my information be shared with others?</h3>
+      <p>Only with trusted service providers or when legally required; never sold to third parties.</p>
+
+      <h3>How can I request access or deletion of my data?</h3>
+      <p>Contact us at <a href="mailto:privacy@plantpopirrigation.com">privacy@plantpopirrigation.com</a> with your request and identification.</p>
+
+      <h3>What happens if there is a data breach?</h3>
+      <p>We will notify affected users and authorities as required by law and take necessary remedial actions immediately.</p>
+
+      <h3>Do you comply with international privacy laws?</h3>
+      <p>Yes, including GDPR and CCPA, depending on your location and service use.</p>
+
+      <h3>What about children’s data?</h3>
+      <p>We take special care not to collect from minors and comply strictly with relevant children's privacy laws.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="legal-compliance-title">
+      <h2 id="legal-compliance-title">Legal Notices and Compliance</h2>
+      <p>Our privacy practices comply with applicable laws in jurisdictions where we operate.</p>
+      <p>We cooperate fully with legal requests and investigations and maintain transparency with users about data handling practices and changes.</p>
+      <p>For detailed legal terms, please refer to our Terms and Conditions page.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="user-responsibility-title">
+      <h2 id="user-responsibility-title">Your Responsibilities for Data Privacy</h2>
+      <p>Protect your passwords and login credentials, ensure your devices have up-to-date security measures, and review privacy policies of third-party platforms you engage with alongside us.</p>
+      <p>Sharing personal data wisely and reporting suspicious activity helps maintain a healthy, secure community.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="examples-scenarios-title">
+      <h2 id="examples-scenarios-title">Examples and Scenarios</h2>
+      <p>Understanding privacy through relatable scenarios helps illustrate our commitment:</p>
+      <ul>
+        <li><strong>Scenario 1:</strong> You submit a service request and receive personalized advice without your data being sold or misused.</li>
+        <li><strong>Scenario 2:</strong> Analytics data informs us how many users browse seedlings pages, helping improve content without personally identifying anyone.</li>
+        <li><strong>Scenario 3:</strong> You opt-out from marketing emails and no promotional content is sent to you, respecting your choice.</li>
+      </ul>
+    </article>
+
+    <article class="content-card" aria-labelledby="disclaimer-title">
+      <h2 id="disclaimer-title">Disclaimer</h2>
+      <p>This Privacy Policy applies solely to Plant Pop Irrigation’s official website and services. External sites linked or referenced may have different policies, and we recommend reviewing those directly.</p>
+      <p>While we strive for utmost security and compliance, no system guarantees 100% protection against cyber threats. Use our services responsibly and report any concerns immediately.</p>
+    </article>
+
+  </section>
+
+  <section id="contact" class="container" aria-labelledby="contact-title" style="margin-bottom: 5rem;">
+    <h2 id="contact-title">Contact Us</h2>
+    <p>Address: 70 Washington Square South, New York, NY 10012, United States</p>
+    <p>Phone: <a href="tel:+18187660103">+1 (818) 766-0103</a></p>
+    <p>Email: <a href="mailto:privacy@plantpopirrigation.com">privacy@plantpopirrigation.com</a></p>
+  </section>
+</main>
+
+<footer role="contentinfo" aria-label="Site footer">
+  <p>Plant Pop Irrigation &copy; 2024</p>
+  <address>
+    70 Washington Square South, New York, NY 10012, United States<br/>
+    Phone: <a href="tel:+18187660103" style="color:inherit;">+1 (818) 766-0103</a>
+  </address>
+</footer>
+
+</body>
+</html>

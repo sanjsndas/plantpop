@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookies Policy - Plant Pop Irrigation</title>
+<style>
+  :root {
+    --primary-green: #3a6b35;
+    --highlight-pink: #e89ab9;
+    --soft-purple: #a886c4;
+    --butterfly-yellow: #f6d258;
+    --neutral-gray: #6b7280;
+    --background: #ffffff;
+    --card-bg: #f9f9fb;
+    --shadow: rgba(58, 107, 53, 0.12);
+    --border-radius: 12px;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap');
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    font-family: var(--font-body);
+    color: var(--neutral-gray);
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--highlight-pink);
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    margin-top: 0;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-top: 2.5rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    color: var(--soft-purple);
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--highlight-pink);
+    margin-top: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  p {
+    max-width: 850px;
+    margin: 0.7rem auto 1.2rem auto;
+    text-align: left;
+  }
+  ul, ol {
+    max-width: 850px;
+    margin: 0.5rem auto 1rem auto;
+    padding-left: 1.6rem;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 0 5rem 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    gap: 2.5rem;
+  }
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: var(--highlight-pink);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a[aria-current="page"]::after {
+    width: 100%;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #d3e9d7 30%, #fce0ec 75%);
+    padding: 5rem 1rem 7rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px var(--shadow);
+    user-select: none;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    color: var(--soft-purple);
+    max-width: 800px;
+    margin: 1.5rem auto 0 auto;
+  }
+  .btn-primary {
+    background: var(--primary-green);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 6px 14px rgba(58,107,53,0.3);
+    margin-top: 3rem;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background-color: var(--highlight-pink);
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(232,154,185,0.5);
+  }
+
+  .content-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 6px 25px var(--shadow);
+    text-align: left;
+  }
+
+  footer {
+    background: var(--primary-green);
+    color: white;
+    padding: 3rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    user-select: none;
+  }
+  footer p, footer address {
+    margin: 0.4rem 0;
+  }
+  footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  /* Cookie Consent Dialog */
+  #cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg);
+    box-shadow: 0 -3px 15px rgba(0,0,0,0.12);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 1100;
+    font-size: 0.95rem;
+    color: var(--neutral-gray);
+  }
+  #cookie-consent p {
+    margin: 0;
+    max-width: 700px;
+  }
+  #cookie-consent button {
+    font-weight: 700;
+    padding: 0.6rem 1.6rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #cookie-accept {
+    background-color: var(--primary-green);
+    color: white;
+  }
+  #cookie-accept:hover {
+    background-color: var(--highlight-pink);
+  }
+  #cookie-decline {
+    background-color: #ddd;
+    color: var(--neutral-gray);
+  }
+  #cookie-decline:hover {
+    background-color: #bbb;
+  }
+
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+      padding-top: 2rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+    }
+    .content-card {
+      padding: 2rem 1.5rem;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 1.2rem;
+      font-size: 1.15rem;
+    }
+    #cookie-consent {
+      flex-direction: column;
+      text-align: center;
+    }
+    #cookie-consent button {
+      width: 140px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0">Plant Pop Irrigation</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="privacy.html" tabindex="0">Privacy</a>
+      <a href="terms.html" tabindex="0">Terms & Conditions</a>
+      <a href="cookies.html" tabindex="0" aria-current="page">Cookies</a>
+      <a href="#contact" tabindex="0">Contact us  </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" role="banner" aria-labelledby="hero-title">
+    <h1 id="hero-title">Cookies Policy</h1>
+    <p>
+      This Cookies Policy explains how Plant Pop Irrigation uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+    </p>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to contact section">Contact Us</button>
+  </section>
+
+  <section class="container" aria-label="Cookies policy content" style="margin-top: 3rem;">
+    <article class="content-card" aria-labelledby="intro-title">
+      <h2 id="intro-title">1. What Are Cookies?</h2>
+      <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. Cookies are widely used to make websites work, or work more efficiently, as well as to provide information to the owners of the site.</p>
+      <p>Cookies serve as a means of recognizing your browser or device to enhance your user experience and provide personalized features.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="why-we-use-title">
+      <h2 id="why-we-use-title">2. Why We Use Cookies</h2>
+      <p>We use cookies for several important reasons. Some cookies are strictly necessary for the functioning of our website, while others help us analyze performance, customize content, and deliver relevant advertising.</p>
+      <p>Cookies enable us to remember your preferences, keep you logged in during sessions, and improve overall site navigation and interaction. They help us gather valuable insights about how users engage with the site.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="types-cookies-title">
+      <h2 id="types-cookies-title">3. Types of Cookies We Use</h2>
+
+      <h3>3.1 Essential Cookies</h3>
+      <p>These cookies are essential for enabling core website functionalities like security, network management, and accessibility.</p>
+      <p>Without these cookies, some parts of the website may not perform correctly or be available to you.</p>
+
+      <h3>3.2 Performance and Functionality Cookies</h3>
+      <p>This type of cookie collects anonymous information about how visitors use the website. They help us understand which pages are visited most often and if users experience error messages from web pages.</p>
+      <p>This information is aggregated and anonymous and is used to improve how the website works.</p>
+
+      <h3>3.3 Analytics and Customization Cookies</h3>
+      <p>We use cookies that collect information to help us improve the customization of your experience and understand your interests.</p>
+      <p>These cookies allow us to remember choices you make, such as language preferences, and recognize returning users.</p>
+
+      <h3>3.4 Advertising and Targeting Cookies</h3>
+      <p>These cookies collect information about your browsing habits to make advertising more relevant to you and your interests.</p>
+      <p>They may be set by third-party advertising networks with our permission and remember that you have visited our website.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="how-manage-cookies-title">
+      <h2 id="how-manage-cookies-title">4. How To Manage Cookies</h2>
+      <p>You have control over cookies and can set your preferences anytime:</p>
+      <ul>
+        <li>Adjust your preferences via the cookie consent banner at the bottom of the page.</li>
+        <li>Configure your browser settings to accept, reject, or delete cookies.</li>
+        <li>Use browser tools or extensions to block or manage cookie data.</li>
+      </ul>
+      <p>Please note that disabling essential cookies may affect your ability to use our website properly.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="third-party-cookies-title">
+      <h2 id="third-party-cookies-title">5. Third-Party Cookies</h2>
+      <p>We collaborate with trusted third-party service providers that may set cookies when you interact with our website.</p>
+      <p>Below are some types of third-party cookies we might use:</p>
+      <ul>
+        <li><strong>Google Analytics Cookies:</strong> Help analyze website traffic and visitor behavior anonymously.</li>
+        <li><strong>Advertising Platforms:</strong> Deliver ads matching your interests while limiting repeated displays.</li>
+        <li><strong>Social Media Cookies:</strong> Facilitate sharing content and integrating social media features.</li>
+      </ul>
+      <p>Each third party maintains its own privacy and cookie policy. We encourage you to review these policies for detailed information and management options.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="cookie-duration-title">
+      <h2 id="cookie-duration-title">6. Cookie Duration</h2>
+      <p>Cookies may persist on your device for varying durations:</p>
+      <ul>
+        <li><strong>Session Cookies:</strong> Temporarily stored in your browser and deleted after you close it.</li>
+        <li><strong>Persistent Cookies:</strong> Remain until expired or manually deleted, helping recognize your device on return visits.</li>
+      </ul>
+      <p>The duration depends on their purpose and type.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="consent-title">
+      <h2 id="consent-title">7. Your Cookie Consent</h2>
+      <p>When you visit our website for the first time, you will be presented with a cookie consent banner that allows you to accept or decline non-essential cookies.</p>
+      <p>If you decline, only essential cookies will be used, and your preferences will be stored for subsequent visits.</p>
+      <p>You can update your preferences at any time by revisiting the cookie banner or adjusting browser settings.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="privacy-link-title">
+      <h2 id="privacy-link-title">8. Relationship With Our Privacy Policy</h2>
+      <p>This Cookies Policy is part of our broader Privacy Policy, which details our practices regarding your personal data overall. You can review the full <a href="privacy.html">Privacy Policy here</a>.</p>
+      <p>We take our responsibility seriously to protect your privacy and comply with all applicable data protection laws, including but not limited to GDPR and CCPA.</p>
+    </article>
+
+    <article class="content-card" aria-labelledby="contact-info-title">
+      <h2 id="contact-info-title">9. Contact Us</h2>
+      <p>If you have any questions about our cookie practices or this policy, please feel free to contact us:</p>
+      <ul>
+        <li><strong>Address:</strong> 70 Washington Square South, New York, NY 10012, United States</li>
+        <li><strong>Phone:</strong> <a href="tel:+18187660103">+1 (818) 766-0103</a></li>
+        <li><strong>Email:</strong> <a href="mailto:privacy@plantpopirrigation.com">privacy@plantpopirrigation.com</a></li>
+      </ul>
+    </article>
+
+    <article class="content-card" aria-labelledby="updates-title">
+      <h2 id="updates-title">10. Updates to This Cookies Policy</h2>
+      <p>We review and update this Cookies Policy regularly to reflect changes in technology, regulation, and our operational practices.</p>
+      <p>Any significant changes will be communicated via our website and, where appropriate, directly to you.</p>
+      <p>We encourage you to check this page periodically for any updates or changes.</p>
+    </article>
+  </section>
+
+  <section id="contact" class="container" aria-labelledby="contact-title" style="margin-bottom: 5rem;">
+    <h2 id="contact-title">Contact Us</h2>
+    <p>Address: 70 Washington Square South, New York, NY 10012, United States</p>
+    <p>Phone: <a href="tel:+18187660103">+1 (818) 766-0103</a></p>
+    <p>Email: <a href="mailto:privacy@plantpopirrigation.com">privacy@plantpopirrigation.com</a></p>
+  </section>
+</main>
+
+<footer role="contentinfo" aria-label="Site footer">
+  <p>Plant Pop Irrigation &copy; 2024</p>
+  <address>
+    70 Washington Square South, New York, NY 10012, United States<br/>
+    Phone: <a href="tel:+18187660103" style="color:inherit;">+1 (818) 766-0103</a>
+  </address>
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookies consent">
+  <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. Please accept or decline our cookies.</p>
+  <button id="cookie-accept" aria-label="Accept cookies">Accept</button>
+  <button id="cookie-decline" aria-label="Decline cookies">Decline</button>
+</div>
+
+<script>
+  (function(){
+    var consentKey = 'plantPopCookieConsent';
+    var cookieConsent = document.getElementById('cookie-consent');
+    var acceptBtn = document.getElementById('cookie-accept');
+    var declineBtn = document.getElementById('cookie-decline');
+
+    function setConsent(value) {
+      localStorage.setItem(consentKey, value);
+      hideConsent();
+    }
+
+    function hideConsent() {
+      cookieConsent.style.display = 'none';
+    }
+
+    function checkConsent() {
+      var consent = localStorage.getItem(consentKey);
+      if (consent === 'accepted' || consent === 'declined') {
+        hideConsent();
+      }
+    }
+
+    acceptBtn.addEventListener('click', function(){
+      setConsent('accepted');
+      // Additional code to enable cookies/analytics can be added here
+    });
+
+    declineBtn.addEventListener('click', function(){
+      setConsent('declined');
+      // Additional code to disable cookies/analytics can be added here
+    });
+
+    checkConsent();
+  })();
+</script>
+
+</body>
+</html>
+
